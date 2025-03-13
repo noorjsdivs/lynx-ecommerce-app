@@ -1,0 +1,139 @@
+:root {
+  background-color: #000;
+  --color-text: #fff;
+}
+.container {
+  margin: 50px 10px 0;
+  height: calc(100vh - 50px);
+}
+
+.app {
+  min-height: 100vh;
+}
+text {
+  color: var(--color-text);
+}
+.title {
+  font-size: 22px;
+  line-height: normal;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.list {
+  width: 96vw;
+  height: 800px;
+  list-main-axis-gap: 10px;
+  list-cross-axis-gap: 10px;
+  padding-bottom: 50px;
+}
+.productCard {
+  position: relative;
+  width: "50%";
+  height: 200px;
+}
+.image {
+  width: "50%";
+  height: 200px;
+  border-radius: 20px;
+}
+.loading {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+.loadingImage {
+  width: 30px;
+  height: 30px;
+  animation: rotate 1s linear infinite; /* Animation property */
+  display: inline-block; /* Ensures transform works properly */
+}
+.header {
+  border-bottom: 1px solid white;
+  padding: 5px 0px;
+}
+.backView {
+  display: flex;
+  align-items: center;
+}
+.backText {
+  font-size: 18px;
+  font-weight: 600;
+}
+.arrowImage {
+  width: 25px;
+  height: 15px;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* Product Screen */
+.product {
+  width: "100%";
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.productImage {
+  width: "100%";
+  height: 45vh;
+  border-radius: 0px 0px 20px 20px;
+}
+.productTitle {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+}
+.description {
+  font-size: 14px;
+  font-weight: 500;
+  max-height: 90px;
+  color: #ffffff90;
+}
+.productDescription {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.heading {
+  font-size: 16px;
+  font-weight: 600;
+}
+.priceView {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.price {
+  font-size: 20px;
+  font-weight: 800;
+}
+.mainPrice {
+  font-size: 18px;
+  text-decoration: double line-through;
+  font-weight: 500;
+  color: #ffffff90;
+}
+.addToCartView {
+  width: "100%";
+  padding: 10px;
+  background-color: var(--color-text);
+  border-radius: 20px;
+  margin-top: 5px;
+}
+.addToCartText {
+  color: #000000;
+  text-align: center;
+  font-size: 20;
+}
