@@ -1,9 +1,10 @@
 :root {
   background-color: #000;
   --color-text: #fff;
+  --color-bg: #000;
 }
 .container {
-  margin: 50px 10px 0;
+  margin: 50px 10px;
   height: calc(100vh - 50px);
 }
 
@@ -25,7 +26,7 @@ text {
   height: 800px;
   list-main-axis-gap: 10px;
   list-cross-axis-gap: 10px;
-  padding-bottom: 50px;
+  padding-bottom: 150px;
 }
 .productCard {
   position: relative;
@@ -55,6 +56,9 @@ text {
 .header {
   border-bottom: 1px solid white;
   padding: 5px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .backView {
   display: flex;
@@ -87,13 +91,14 @@ text {
 }
 .productImage {
   width: "100%";
-  height: 45vh;
+  height: 44vh;
   border-radius: 0px 0px 20px 20px;
 }
 .productTitle {
   font-size: 16px;
   font-weight: 600;
   line-height: 20px;
+  height: 60px;
 }
 .description {
   font-size: 14px;

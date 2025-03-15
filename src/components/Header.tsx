@@ -4,10 +4,11 @@ const Header = () => {
   const nav = useNavigate();
   return (
     <view className="header">
-      <view className="backView" bindtap={() => nav(-1)}>
-        <image className="arrowImage" src={arrowBack} />
+      <view bindtap={() => nav(-1)} className="backView">
+        <image src={arrowBack} className="arrowImage" />
         <text className="backText">Back</text>
       </view>
+      <text style="font-size:16px;font-weight:600">Cart</text>
     </view>
   );
 };
