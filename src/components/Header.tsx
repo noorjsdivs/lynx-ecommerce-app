@@ -10,7 +10,7 @@ const Header = () => {
   const isHome = location.pathname === "/";
   const { items, favoriteProduct } = useCartStore();
   return (
-    <view style="display:flex;align-items:center;justify-content:space-between;padding-bottom:5px;border-bottom:1px solid #ffffff80; margin-bottom:10px">
+    <view style="display:flex;align-items:center;justify-content:space-between;padding-bottom:5px;border-bottom:1px solid #ffffff80">
       {isHome ? (
         <image src={logo} style="width:30px; height:30px" />
       ) : (
