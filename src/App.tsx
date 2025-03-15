@@ -5,7 +5,7 @@ import Container from "./components/Container.tsx";
 import type { ProductData } from "../types.ts";
 import ProductCard from "./components/ProductCard.tsx";
 import Loading from "./components/Loading.tsx";
-import HomeHeader from "./components/HomeHeader.tsx";
+import Header from "./components/Header.tsx";
 
 export function App() {
   const [products, setProducts] = useState<ProductData[]>([]);
@@ -33,7 +33,7 @@ export function App() {
         <Loading />
       ) : (
         <Container>
-          <HomeHeader />
+          <Header />
           <text className="title">Our Products</text>
           <view>
             <list

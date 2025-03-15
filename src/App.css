@@ -72,6 +72,11 @@ text {
   width: 25px;
   height: 15px;
 }
+.headerCart {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
 @keyframes rotate {
   from {

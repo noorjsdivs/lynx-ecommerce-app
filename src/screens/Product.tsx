@@ -1,20 +1,24 @@
+import useCartStore from "../../store.ts";
 import type { ProductData } from "../../types.ts";
 import Container from "../components/Container.tsx";
-import Header from "../components/Header.tsx";
 import { useLocation } from "react-router";
+import Header from "../components/Header.tsx";
+import WishlistIcon from "../components/WishlistIcon.tsx";
 
 const Product = () => {
   const { state } = useLocation();
   const product: ProductData = state?.product;
-
-  console.log(product);
+  const { addItem, addToFavorite } = useCartStore();
 
   return (
     <view>
       <Container>
         <Header />
         <view className="product">
-          <image src={product?.image} className="productImage" />
+          <view style={{ position: "relative" }}>
+            <image src={product?.image} className="productImage" />
+            <WishlistIcon product={product} />
+          </view>
           <text className="productTitle">{product?.title}</text>
           <text className="description">{product?.description}</text>
           <view className="productDescription">
@@ -41,7 +45,7 @@ const Product = () => {
               ${product?.price + product?.discount}
             </text>
           </view>
-          <view className="addToCartView">
+          <view className="addToCartView" bindtap={() => addItem(product)}>
             <text className="addToCartText">Add to Cart</text>
           </view>
         </view>
