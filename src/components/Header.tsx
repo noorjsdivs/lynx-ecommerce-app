@@ -4,11 +4,18 @@ import cartIcon from "../assets/cartIcon.png";
 import heartIcon from "../assets/heartIcon.png";
 import { useLocation, useNavigate } from "react-router";
 import useCartStore from "../../store.ts";
+import { useState } from "@lynx-js/react";
+import close from "../assets/close.png";
 const Header = () => {
   const nav = useNavigate();
   const location = useLocation();
   const isHome = location.pathname === "/";
   const { items, favoriteProduct } = useCartStore();
+  const [search, setSearch] = useState("");
+  const handleInput = (event: any) => {
+    setSearch(event.detail.value);
+  };
+
   return (
     <view style="display:flex;align-items:center;justify-content:space-between;padding-bottom:5px;border-bottom:1px solid #ffffff80">
       {isHome ? (
@@ -19,6 +26,22 @@ const Header = () => {
           <text className="backText">Back</text>
         </view>
       )}
+      <view className="inputView">
+        <input
+          // @ts-ignore
+          bindinput={handleInput}
+          className="inputBox"
+          placeholder="Search products here..."
+          value={search}
+        />
+        {search && (
+          <image
+            bindtap={() => setSearch("")}
+            src={close}
+            className="closeIcon"
+          />
+        )}
+      </view>
       <view className="headerCart">
         <view
           bindtap={() => nav("/wishlist")}
